@@ -1,0 +1,29 @@
+Summary of the Notebook: Airbnb_Final_Project
+Title: Exploring Airbnb Listings in Portugal: A Data-driven Analysis
+Group Members: Baran Can Çelik (20232067), Carlos Lourenço (20232020), Priyá Dessai (20232053) and Raysa Rocha (20232051)
+1. Introduction
+This notebook focuses on exploring and analyzing Airbnb listings data for Lisbon to gain insights into rental patterns and characteristics. The data, sourced from a CSV file named "listings.csv," was examined through various stages including initial exploration, statistical analysis, and visual inspection. The ultimate goal was to clean and preprocess the data, apply clustering algorithms to identify distinct rental types, and derive meaningful conclusions.
+2. Data Exploration and Cleaning
+* Initial Data Exploration: The dataset was loaded into a Pandas DataFrame. Initial exploration includes checking for duplicates, examining the dimensions of the DataFrame (22,929 rows and 18 columns), and identifying variable types (4 floats, 7 integers, and 7 objects).
+* Statistical Exploration: The dataset was further explored by creating a copy and focusing on numerical variables and categorical variables.
+* Visual Exploration: Boxplots and histograms were used to identify outliers and the distribution of key variables. Missing values were detected in the 'price' and 'reviews_per_month' columns.
+3. Data Preprocessing
+* Data Cleaning: Observations with unrealistic values (e.g., prices above 2000 and minimum nights above 365) were removed, reducing the DataFrame to 22,906 observations. 
+* Missing Values: The missing values in 'reviews_per_month' were filled with zeros and the K-NN Imputer method was used to fill missing values in 'price' column based on 'price', 'neighbourhood', and 'room_type' columns.
+4. Modelling
+* Normalization: Data was normalized using StandardScaler to prepare for clustering.
+* Determining Optimal Clusters: The Elbow Method and Silhouette Score were used to determine the optimal number of clusters.
+* Clustering: The K-Means algorithm, K-Means after applying PCA, and DBSCAN were applied and analyzed. Despite DBSCAN achieving the highest Silhouette Score, K-Means was chosen due to its performance and more balanced cluster distribution.
+6. Further Analysis
+* The clusters from K-Means were analyzed and then combined with categorical variables (neighborhood, host_id, and room_type) for a more in-depth analysis of each cluster.
+* Insights and Conclusions: Key insights from the analysis include identifying distinct rental types (luxury rentals, budget-friendly rentals, etc.) and their characteristics based on the clusters.
+Conclusion
+The notebook provides a comprehensive exploration, cleaning, and analysis of Airbnb listings in Lisbon. By combining statistical, visual, and clustering analyses, it identifies distinct patterns and characteristics within the dataset. The final choice of K-Means clustering over DBSCAN and K-Means after PCA is justified by the more balanced cluster distribution, facilitating meaningful insights.
+Programming for Data Science 2024
+
+
+
+
+1
+
+
